@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "takeme-77479": {
+      "hosting": {
+        "Takeme": [
+          "takeme-77479"
+        ]
+      }
+    }
+  }
+}
