@@ -2,7 +2,7 @@
   "hosting": [
     {
       "target": "Takeme",
-      "public": "public",
+      "public": "dist/Takeme",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "rewrites": [
         {
