@@ -64,7 +64,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Takeme:build"
+            "browserTarget": "takeme:build"
           },
           "configurations": {
             "production": {
