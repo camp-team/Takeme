@@ -1,0 +1,29 @@
+.main-visual img {
+  position: relative;
+}
+
+#form5 {
+  margin-bottom: 20px;
+  position: absolute;
+  top: 360px;
+  left: 580px;
+}
+.form-text {
+  height: 40px;
+  width: 240px;
+}
+#sbtn5 {
+  width: 70px;
+  height: 50px;
+  border-radius: 2px;
+  background: #7fbfff;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  margin-left: 16px;
+}
+#sbtn5:hover {
+  background: #eee;
+  color: #7fbfff;
+}

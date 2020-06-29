@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { TopRoutingModule } from './top-routing.module';
 import { TopComponent } from './top.component';
+import { MainVisualComponent } from '../main-visual/main-visual.component';
 
 
 @NgModule({
-  declarations: [TopComponent],
+  declarations: [TopComponent, MainVisualComponent],
   imports: [
     CommonModule,
     TopRoutingModule
