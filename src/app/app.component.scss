@@ -14,3 +14,15 @@
     display: inline-block;
   }
 }
+.footer {
+  color: white;
+  background-color: #432;
+  display: flex;
+  justify-content: center;
+  padding: 4px;
+  margin-top: 500px;
+
+  p {
+    padding: 16px;
+  }
+}
