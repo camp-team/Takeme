@@ -6,9 +6,10 @@ import { TopComponent } from './top.component';
 import { MainVisualComponent } from '../main-visual/main-visual.component';
 import { NewArrivalComponent } from '../new-arrival/new-arrival.component';
 import { MatCardModule } from '@angular/material/card';
+import { SwiperModule } from 'ngx-swiper-wrapper';
 
 @NgModule({
   declarations: [TopComponent, MainVisualComponent, NewArrivalComponent],
-  imports: [CommonModule, TopRoutingModule, MatCardModule],
+  imports: [CommonModule, TopRoutingModule, MatCardModule, SwiperModule],
 })
 export class TopModule {}
