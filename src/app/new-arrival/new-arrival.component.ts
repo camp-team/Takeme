@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
 @Component({
   selector: 'app-new-arrival',
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-arrival.component.scss'],
 })
 export class NewArrivalComponent implements OnInit {
+  config: SwiperConfigInterface = {
+    loop: true,
+    navigation: true,
+    slidesPerView: 3,
+  };
+  selectedResId = 0;
   items = [
     {
       title: 'item 1',
