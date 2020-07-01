@@ -1,18 +1,14 @@
 <div class="container">
   <h2 class="heading">Takemeの新着</h2>
 
-  <swiper [config]="config" [(index)]="selectedResId">
-    <div>
-      <img src="" alt="" />
-    </div>
-  </swiper>
-
   <div class="grid">
-    <mat-card *ngFor="let item of items">
-      <img src="https://placehold.it/400x200" alt="dummy" />
-      <h3>{{ item.title }}</h3>
-      <p>指定時間</p>
-      <p>料金</p>
-    </mat-card>
+    <swiper [config]="config" [(index)]="selectedResId">
+      <mat-card *ngFor="let resId of resIds">
+        <img src="/assets/images/res-{{ resId }}.jpeg" alt="レストラン" />
+        <h3>お店の名前</h3>
+        <p>指定時間</p>
+        <p>料金</p>
+      </mat-card>
+    </swiper>
   </div>
 </div>

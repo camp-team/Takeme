@@ -7,6 +7,8 @@ import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
   styleUrls: ['./new-arrival.component.scss'],
 })
 export class NewArrivalComponent implements OnInit {
+  resIds = [...Array(10)].map((_, i) => i + 1);
+
   config: SwiperConfigInterface = {
     loop: true,
     navigation: true,
