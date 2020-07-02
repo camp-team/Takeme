@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
 @Component({
@@ -15,15 +15,22 @@ export class NewArrivalComponent implements OnInit {
     slidesPerView: 3,
   };
   selectedResId = 0;
-  items = [
+
+  redIds = [
     {
       title: 'item 1',
+      name: 'ffff',
+      price: '100',
     },
     {
       title: 'item 2',
+      name: 'gggg',
+      price: '200',
     },
     {
-      title: 'item 3',
+      title: 'item 2',
+      name: 'dddd',
+      price: '300',
     },
   ];
 

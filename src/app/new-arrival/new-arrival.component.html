@@ -5,9 +5,10 @@
     <swiper [config]="config" [(index)]="selectedResId">
       <mat-card *ngFor="let resId of resIds">
         <img src="/assets/images/res-{{ resId }}.jpeg" alt="レストラン" />
-        <h3>お店の名前</h3>
-        <p>指定時間</p>
-        <p>料金</p>
+        <mat-card *ngFor="let resaId of resIds"></mat-card>
+        <h3>{{ resId }}</h3>
+        <p>{{ resIds }}</p>
+        <p>{{ resIds }}</p>
       </mat-card>
     </swiper>
   </div>
