@@ -3,13 +3,14 @@
 
   <div class="grid">
     <swiper [config]="config" [(index)]="selectedResId">
-      <mat-card *ngFor="let resId of resIds">
-        <img src="/assets/images/res-{{ resId }}.jpeg" alt="レストラン" />
-        <mat-card *ngFor="let resaId of resIds"></mat-card>
-        <h3>{{ resId }}</h3>
-        <p>{{ resIds }}</p>
-        <p>{{ resIds }}</p>
-      </mat-card>
+      <div class="item" *ngFor="let restaurant of restaurants; index as i">
+        <mat-card>
+          <img src="/assets/images/res-{{ i + 1 }}.jpeg" alt="レストラン" />
+          <h3>{{ restaurant.name }}</h3>
+          <p>{{ restaurant.place }}</p>
+          <p>{{ restaurant.price }}</p>
+        </mat-card>
+      </div>
     </swiper>
   </div>
 </div>

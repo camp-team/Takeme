@@ -7,8 +7,6 @@ import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
   styleUrls: ['./new-arrival.component.scss'],
 })
 export class NewArrivalComponent implements OnInit {
-  resIds = [...Array(10)].map((_, i) => i + 1);
-
   config: SwiperConfigInterface = {
     loop: true,
     navigation: true,
@@ -16,20 +14,20 @@ export class NewArrivalComponent implements OnInit {
   };
   selectedResId = 0;
 
-  redIds = [
+  restaurants = [
     {
-      title: 'item 1',
-      name: 'ffff',
+      name: 'item 1',
+      place: 'ffff',
       price: '100',
     },
     {
-      title: 'item 2',
-      name: 'gggg',
+      name: 'item 2',
+      place: 'gggg',
       price: '200',
     },
     {
-      title: 'item 2',
-      name: 'dddd',
+      name: 'item 2',
+      place: 'dddd',
       price: '300',
     },
   ];
