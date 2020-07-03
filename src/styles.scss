@@ -1,4 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+.heading {
+  font-family: UberMoveText-Medium, sans-serif;
+  font-size: 26px;
+  padding-left: 16px;
+}
+.container {
+  padding: 56px;
+}
+img {
+  max-width: 100%;
+}
