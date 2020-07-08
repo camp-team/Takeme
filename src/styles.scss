@@ -6,16 +6,25 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 .heading {
   font-family: UberMoveText-Medium, sans-serif;
   font-size: 26px;
   padding-left: 16px;
 }
+footer {
+  font-family: -apple-system, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
 .container {
   padding: 56px;
 }
 img {
   max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
 }
