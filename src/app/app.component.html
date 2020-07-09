@@ -1,16 +1,20 @@
-<div class="header">
-  <p class="header__logo">TAKEME</p>
-  <nav class="nav">
-    <a href="" class="nav__item">ログイン</a>
-    <a href="" class="nav__item">Takemeについて</a>
-    <a href="" class="nav__item">店舗の皆様</a>
-  </nav>
-</div>
-<router-outlet></router-outlet>
-<footer>
-  <div class="footer">
-    <p>個人情報保護方針</p>
-    <p>利用規約</p>
-    <p>&copy 2020Ash</p>
+<header>
+  <div class="header-left">
+    <p class="header-logo">To-Be</p>
+    <form class="form" action="">
+      <input
+        class="form-text"
+        type="search"
+        placeholder="何にチャレンジしたいですか？"
+      />
+      <input class="button" type="submit" value="検索" />
+    </form>
   </div>
-</footer>
+  <div class="header-right">
+    <nav class="nav">
+      <a href="" class="nav__item">To-Beについて</a>
+      <a href="" class="nav__item">ログイン</a>
+    </nav>
+  </div>
+</header>
+<router-outlet></router-outlet>
