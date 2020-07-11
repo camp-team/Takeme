@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class MainVisualComponent implements OnInit {
   constructor() {
     const picsSrc = [
-      '/assets/images/res-1.jpeg',
-      '/assets/images/res-2.jpeg',
-      '/assets/images/res-3.jpeg',
+      '/assets/images/project:1.jpeg',
+      '/assets/images/project:2.jpeg',
+      '/assets/images/project:3.jpeg',
     ];
     let num = -1;
 
