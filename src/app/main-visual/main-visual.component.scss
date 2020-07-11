@@ -1,29 +1,15 @@
-.main-visual img {
-  position: relative;
+.container {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 1400px;
+  height: 400px;
+  color: #333;
+  background: gray;
+  display: flex;
 }
-
-.form {
-  margin-bottom: 20px;
-  position: absolute;
-  top: 360px;
-  left: 580px;
+img {
+  margin-left: 32px;
 }
-.form-text {
-  height: 40px;
-  width: 240px;
-}
-#sbtn5 {
-  width: 70px;
-  height: 50px;
-  border-radius: 2px;
-  background: #7fbfff;
-  color: #fff;
-  font-weight: bold;
-  font-size: 16px;
-  border: none;
+.explain {
   margin-left: 16px;
-}
-#sbtn5:hover {
-  background: #eee;
-  color: #7fbfff;
 }
