@@ -10,11 +10,12 @@
       <input class="button" type="submit" value="検索" />
     </form>
   </div>
-  <div class="header-right">
-    <nav class="nav">
-      <a href="" class="nav__item">To-Beについて</a>
-      <a href="" class="nav__item">ログイン</a>
-    </nav>
+  <div *ngIf="user$ | async as user; else loginBlock" class="login">
+    <p>{{ user.name }}でログイン中</p>
+    <button (click)="login()">ログアウト</button>
   </div>
+  <ng-template #loginBlock>
+    <button (click)="login()">ログイン</button>
+  </ng-template>
 </header>
 <router-outlet></router-outlet>
