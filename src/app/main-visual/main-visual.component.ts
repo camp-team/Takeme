@@ -6,12 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-visual.component.scss'],
 })
 export class MainVisualComponent implements OnInit {
+  projects = [
+    {
+      name: 'aksdmaskd',
+      place: 'asd',
+      price: 'asndas',
+    },
+  ];
   constructor() {
-    const picsSrc = [
-      '/assets/images/project:1.jpeg',
-      '/assets/images/project:2.jpeg',
-      '/assets/images/project:3.jpeg',
+    const projects = [
+      '/assets/images/project-1.jpeg',
+      '/assets/images/project-2.jpeg',
+      '/assets/images/project-3.jpeg',
     ];
+
     let num = -1;
 
     function slideshow_timer() {
@@ -20,10 +28,10 @@ export class MainVisualComponent implements OnInit {
       } else {
         num++;
       }
-      document.getElementById('mypic').src = picsSrc[num];
+      document.getElementById('mypic').nodeValue = projects[num];
     }
 
-    setInterval(slideshow_timer, 3000);
+    setInterval(slideshow_timer, 5000);
   }
   ngOnInit(): void {}
 }

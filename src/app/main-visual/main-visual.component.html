@@ -1,13 +1,13 @@
 <div class="container">
-  <div class="images">
-    <a href="#"
-      ><img
-        id="mypic"
-        src="http://lorempixel.com/g/600/400"
-        width="640"
-        height="400"
-        class="lazyload"
-      />
-    </a>
+  <div class="item" *ngFor="let project of projects; index as i">
+    <img
+      src="/assets/images/project-{{ i + 1 }}.jpeg"
+      alt="レストラン"
+      width="640px"
+      height="400px"
+    />
+    <h3>{{ project.name }}</h3>
+    <p>{{ project.place }}</p>
+    <p>{{ project.price }}</p>
   </div>
 </div>
