@@ -53,3 +53,58 @@ form {
   box-shadow: none;
   text-shadow: none;
 }
+footer {
+  border-top: black 1px solid;
+  box-shadow: 1px 1px 7px;
+}
+.footer-main {
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+.logo {
+  font-size: 24px;
+}
+.footer-left {
+  margin-right: 160px;
+}
+.sub-title {
+  font-size: 13px;
+  margin-left: 36px;
+}
+.sub-menu {
+  font-size: 13px;
+  a {
+    color: black;
+  }
+  li {
+    margin-top: 16px;
+  }
+}
+.icon {
+  padding-top: 40px;
+  text-align: center;
+  font-size: 16px;
+}
+.fab {
+  padding-left: 16px;
+}
+
+.copy {
+  margin-top: 60px;
+  color: rgb(184, 174, 174);
+  text-align: center;
+  padding-bottom: 8px;
+}
+.facebook {
+  font-size: 40px;
+}
+.twitter {
+  font-size: 40px;
+  color: #1da1f2;
+}
+.line {
+  font-size: 40px;
+  color: #19bc06;
+}
