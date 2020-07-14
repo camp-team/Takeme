@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
 @Component({
   selector: 'app-main-visual',
@@ -6,32 +7,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-visual.component.scss'],
 })
 export class MainVisualComponent implements OnInit {
+  config: SwiperConfigInterface = {
+    loop: true,
+    navigation: true,
+    slidesPerView: 1,
+    centeredSlides: true,
+  };
+  selectedProjectId = 0;
   projects = [
     {
-      name: 'aksdmaskd',
-      place: 'asd',
-      price: 'asndas',
+      title: '朝ラン30分',
+      explain: '詳細記載',
+    },
+    {
+      title: '読書30分',
+      explain: '詳細記載',
+    },
+    {
+      title: '勉強30分',
+      explain: '詳細記載',
     },
   ];
-  constructor() {
-    const projects = [
-      '/assets/images/project-1.jpeg',
-      '/assets/images/project-2.jpeg',
-      '/assets/images/project-3.jpeg',
-    ];
-
-    let num = -1;
-
-    function slideshow_timer() {
-      if (num === 2) {
-        num = 0;
-      } else {
-        num++;
-      }
-      document.getElementById('mypic').nodeValue = projects[num];
-    }
-
-    setInterval(slideshow_timer, 5000);
-  }
+  constructor() {}
   ngOnInit(): void {}
 }

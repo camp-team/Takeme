@@ -1,12 +1,18 @@
-.container {
-  margin: 0 auto;
-  margin-top: 40px;
-  width: 1400px;
-  height: 400px;
-  color: #333;
-  background: gray;
-  display: flex;
-}
 .item {
-  margin-left: 32px;
+  display: flex;
+  justify-content: center;
+  &__title {
+    margin-right: 400px;
+    color: white;
+  }
+  &__image {
+    margin-right: 24px;
+    padding: 7px;
+    border: 1px solid #ccc;
+    background: #fff;
+  }
+}
+.container {
+  background-color: rgb(29, 23, 23);
+  margin: 24px 0px;
 }

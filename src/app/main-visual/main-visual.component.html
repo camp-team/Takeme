@@ -1,13 +1,18 @@
 <div class="container">
-  <div class="item" *ngFor="let project of projects; index as i">
-    <img
-      src="/assets/images/project-{{ i + 1 }}.jpeg"
-      alt="レストラン"
-      width="640px"
-      height="400px"
-    />
-    <h3>{{ project.name }}</h3>
-    <p>{{ project.place }}</p>
-    <p>{{ project.price }}</p>
-  </div>
+  <swiper [config]="config" [(index)]="selectedProjectId">
+    <div class="item" *ngFor="let project of projects; index as i">
+      <div class="item__image">
+        <img
+          src="/assets/images/project-{{ i + 1 }}.jpeg"
+          alt="プロジェクト"
+          width="640px"
+          height="400px"
+        />
+      </div>
+      <div class="item__title">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.explain }}</p>
+      </div>
+    </div>
+  </swiper>
 </div>
