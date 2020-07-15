@@ -1,1 +1,24 @@
-
+<div class="container">
+  <swiper [config]="config" [(index)]="selectedProjectId">
+    <div class="item" *ngFor="let project of projects; index as i">
+      <div class="item__image">
+        <a href="#"
+          ><img
+            src="/assets/images/project-{{ i + 1 }}.jpeg"
+            alt="プロジェクト"
+            width="640px"
+            height="400px"
+          />
+        </a>
+      </div>
+      <div class="item__title">
+        <a href="http://"
+          ><h3>{{ project.title }}</h3></a
+        >
+        <a href="http://"
+          ><p>{{ project.explain }}</p></a
+        >
+      </div>
+    </div>
+  </swiper>
+</div>
