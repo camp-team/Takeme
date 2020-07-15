@@ -90,18 +90,21 @@ footer {
 .fab {
   padding-left: 16px;
 }
-.fa-blue:before {
-  color: #1ea1f2;
-}
-.fa-red:before {
-  color: #7940ca;
-}
-.fa-green:before {
-  color: rgb(59, 235, 59);
-}
+
 .copy {
   margin-top: 60px;
   color: rgb(184, 174, 174);
   text-align: center;
   padding-bottom: 8px;
+}
+.facebook {
+  font-size: 40px;
+}
+.twitter {
+  font-size: 40px;
+  color: #1da1f2;
+}
+.line {
+  font-size: 40px;
+  color: #19bc06;
 }
