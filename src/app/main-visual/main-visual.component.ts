@@ -16,16 +16,16 @@ export class MainVisualComponent implements OnInit {
   selectedProjectId = 0;
   projects = [
     {
-      title: '朝ラン30分',
-      explain: '詳細記載',
+      title: '毎朝朝ラン30分',
+      explain: '詳細画面移行',
     },
     {
-      title: '読書30分',
-      explain: '詳細記載',
+      title: '毎日読書30分',
+      explain: '詳細画面移行',
     },
     {
-      title: '勉強30分',
-      explain: '詳細記載',
+      title: '毎日勉強30分',
+      explain: '詳細画面移行',
     },
   ];
   constructor() {}
