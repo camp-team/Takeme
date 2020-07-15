@@ -10,13 +10,7 @@
       <input class="button" type="submit" value="検索" />
     </form>
   </div>
-  <div *ngIf="user$ | async as user; else loginBlock" class="login">
-    <p>{{ user.name }}でログイン中</p>
-    <button (click)="login()">ログアウト</button>
-  </div>
-  <ng-template #loginBlock>
-    <button (click)="login()">ログイン</button>
-  </ng-template>
+  <button (click)="login()" mat-raised-button color="primary">ログイン</button>
 </header>
 <router-outlet></router-outlet>
 <footer>
