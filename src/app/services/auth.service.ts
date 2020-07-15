@@ -4,6 +4,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { auth, User } from 'firebase/app';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +12,7 @@ import { switchMap } from 'rxjs/operators';
 export class AuthService {
   afUser$: Observable<User> = this.afAuth.user;
 
-  constructor(private afAuth: AngularFireAuth) {
+  constructor(private afAuth: AngularFireAuth, private router: Router) {
     this.afUser$.subscribe((user) => console.log(user));
   }
 
@@ -20,5 +21,6 @@ export class AuthService {
   }
   logout() {
     this.afAuth.signOut();
+    this.router.navigateByUrl('/');
   }
 }

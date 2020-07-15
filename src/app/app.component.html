@@ -11,6 +11,14 @@
     </form>
   </div>
   <button (click)="login()" mat-raised-button color="primary">ログイン</button>
+  <button
+    *ngIf="user$ | async"
+    (click)="logout()"
+    mat-raised-button
+    color="primary"
+  >
+    ログアウト
+  </button>
 </header>
 <router-outlet></router-outlet>
 <footer>
