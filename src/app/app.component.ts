@@ -7,8 +7,8 @@ import { AuthService } from './services/auth.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  user$ = this.authService.user$;
-
+  user$ = this.authService.afUser$;
+  isProcessing: boolean;
   constructor(private authService: AuthService) {}
 
   login() {
