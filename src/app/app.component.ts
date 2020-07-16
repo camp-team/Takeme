@@ -8,6 +8,7 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
   user$ = this.authService.afUser$;
+  isProcessing: boolean;
   constructor(private authService: AuthService) {}
 
   login() {

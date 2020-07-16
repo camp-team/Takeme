@@ -10,15 +10,17 @@
       <input class="button" type="submit" value="検索" />
     </form>
   </div>
-  <button (click)="login()" mat-raised-button color="primary">ログイン</button>
-  <button
-    *ngIf="user$ | async"
-    (click)="logout()"
-    mat-raised-button
-    color="primary"
-  >
-    ログアウト
-  </button>
+  <div class="login">
+    <div class="login__items">
+      <button class="login-in" *ngIf="!(user$ | async)" (click)="login()">
+        ログイン
+      </button>
+
+      <button class="login-out" *ngIf="user$ | async" (click)="logout()">
+        ログアウト
+      </button>
+    </div>
+  </div>
 </header>
 <router-outlet></router-outlet>
 <footer>

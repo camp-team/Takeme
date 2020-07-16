@@ -108,3 +108,30 @@ footer {
   font-size: 40px;
   color: #19bc06;
 }
+
+.login {
+  font-family: 'Yu Gothic', YuGothic, Verdana, 'Hiragino Kaku Gothic ProN',
+    'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo,
+    sans-serif;
+  text-align: center;
+  padding-top: 20px;
+  &-in,
+  &-out {
+    display: block;
+    width: 100px;
+    text-align: center;
+    font-size: 8px;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 4px;
+    background-image: linear-gradient(-90deg, #ff006e, #ffd500);
+    border: none;
+    transition: 0.5s;
+    background-size: 200%;
+  }
+  &-in:hover,
+  &-out:hover {
+    background-position: right center;
+  }
+}
