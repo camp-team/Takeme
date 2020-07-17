@@ -12,6 +12,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireFunctionsModule, REGION } from '@angular/fire/functions';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,6 +27,7 @@ import { MatIconModule } from '@angular/material/icon';
     AngularFireFunctionsModule,
     AngularFireAuthModule,
     MatIconModule,
+    MatSnackBarModule,
   ],
   providers: [{ provide: REGION, useValue: 'asia^northeast1' }],
   bootstrap: [AppComponent],
