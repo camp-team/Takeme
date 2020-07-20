@@ -17,8 +17,14 @@ export class AppComponent {
     this.dialog.open(LoginDialogComponent);
   }
 
-  login() {
-    this.authService.login();
+  facebookLogin() {
+    this.authService.facebooklogin();
+  }
+  twitterLogin() {
+    this.authService.twitterlogin();
+  }
+  googleLogin() {
+    this.authService.googlelogin();
   }
   logout() {
     this.authService.logout();

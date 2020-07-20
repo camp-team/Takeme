@@ -21,10 +21,28 @@ export class AuthService {
     this.afUser$.subscribe((user) => console.log(user));
   }
 
-  login() {
+  facebooklogin() {
+    const provider = new auth.FacebookAuthProvider();
+    provider.setCustomParameters({ prompt: 'select_account' });
+    return this.afAuth.signInWithPopup(provider).then(() => {
+      this.snackBar.open('ようこそ', null, {
+        duration: 2000,
+      });
+    });
+  }
+  twitterlogin() {
+    const provider = new auth.TwitterAuthProvider();
+    provider.setCustomParameters({ prompt: 'select_account' });
+    return this.afAuth.signInWithPopup(provider).then(() => {
+      this.snackBar.open('ようこそ', null, {
+        duration: 2000,
+      });
+    });
+  }
+  googlelogin() {
     const provider = new auth.GoogleAuthProvider();
     provider.setCustomParameters({ prompt: 'select_account' });
-    this.afAuth.signInWithPopup(provider).then(() => {
+    return this.afAuth.signInWithPopup(provider).then(() => {
       this.snackBar.open('ようこそ', null, {
         duration: 2000,
       });
