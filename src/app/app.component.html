@@ -11,15 +11,9 @@
     </form>
   </div>
   <div class="login">
-    <div class="login__items">
-      <button class="login-in" *ngIf="!(user$ | async)" (click)="login()">
-        ログイン
-      </button>
-
-      <button class="login-out" *ngIf="user$ | async" (click)="logout()">
-        ログアウト
-      </button>
-    </div>
+    <button class="login-button" (click)="openLoginDialog()">
+      ログイン
+    </button>
   </div>
 </header>
 <router-outlet></router-outlet>

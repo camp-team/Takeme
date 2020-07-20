@@ -13,9 +13,12 @@ import { AngularFireFunctionsModule, REGION } from '@angular/fire/functions';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { SharedModule } from './shared/shared.module';
+import { LoginDialogComponent } from './login-dialog/login-dialog.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LoginDialogComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -28,8 +31,11 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     AngularFireAuthModule,
     MatIconModule,
     MatSnackBarModule,
+    SharedModule,
+    MatButtonModule,
   ],
   providers: [{ provide: REGION, useValue: 'asia^northeast1' }],
   bootstrap: [AppComponent],
+  entryComponents: [LoginDialogComponent],
 })
 export class AppModule {}
