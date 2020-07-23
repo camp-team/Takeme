@@ -45,9 +45,6 @@ export class AuthService {
             break;
         }
       });
-    this.afAuth.user.subscribe((authUser) => {
-      console.log(this.afAuth.emailVerified);
-    });
   }
 
   resetPassword(email: string) {
