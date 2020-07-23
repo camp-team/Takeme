@@ -1,0 +1,97 @@
+.login {
+  &__items {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    font-family: -apple-system, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue',
+      Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+      'Segoe UI Symbol';
+    font-weight: bold;
+    margin-bottom: 24px;
+  }
+  &-facebook {
+    background-color: #1977f2;
+    padding: 14px 100px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    margin: 12px 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  &-twitter {
+    padding: 14px 100px;
+    color: white;
+    font-size: 16px;
+    background-color: #1da1f2;
+    border: none;
+    margin-bottom: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  &-google {
+    padding: 14px 100px;
+    color: black;
+    font-size: 16px;
+    background-color: #f8f8f9;
+    border: none;
+    font-weight: bold;
+    border: 2px black solid;
+    letter-spacing: 2px;
+  }
+}
+.fab {
+  font-size: 16px;
+}
+.login {
+  color: black;
+  h1,
+  h2 {
+    font-size: 16px;
+    margin: 0;
+  }
+}
+.login-form p {
+  font-size: 8px;
+}
+.reset {
+  display: flex;
+  justify-content: space-between;
+}
+.email,
+.password {
+  width: 100%;
+  padding: 14px 0;
+  color: black;
+  font-size: 16px;
+  background-color: #f8f8f9;
+  border: none;
+  border: 2px #e9f0fe solid;
+  letter-spacing: 2px;
+  margin: 4px 0;
+  background-color: #e9f0fe;
+}
+.login-login {
+  width: 100%;
+  padding: 14px 0;
+  color: white;
+  font-size: 16px;
+  background-color: #f8f8f9;
+  border: none;
+  font-weight: bold;
+  border: 2px orange solid;
+  letter-spacing: 2px;
+  margin: 4px 0;
+  background-color: orange;
+}
+.login-form {
+  width: 366px;
+}
+hr {
+  color: #eeeff0;
+}
+.resetPassword,
+.register {
+  font-size: 4px;
+  border: none;
+}
