@@ -13,7 +13,7 @@ export class AppComponent {
   isProcessing: boolean;
   constructor(private authService: AuthService, private dialog: MatDialog) {}
 
-  openLoginDialog() {
+  login() {
     this.dialog.open(LoginDialogComponent);
   }
 
