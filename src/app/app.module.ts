@@ -16,6 +16,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { SharedModule } from './shared/shared.module';
 import { LoginDialogComponent } from './login-dialog/login-dialog.component';
 import { MatButtonModule } from '@angular/material/button';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, LoginDialogComponent],
@@ -33,6 +34,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatSnackBarModule,
     SharedModule,
     MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [{ provide: REGION, useValue: 'asia^northeast1' }],
   bootstrap: [AppComponent],
