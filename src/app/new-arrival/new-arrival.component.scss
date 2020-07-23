@@ -1,12 +1,17 @@
+.heading {
+  margin-left: 80px;
+  margin-bottom: 16px;
+  mat-icon {
+    margin-right: 8px;
+    font-size: 24px;
+  }
+}
 .grid {
-  grid-template-columns: repeat(3, 1fr);
+  display: grid;
 }
-img {
-  width: 400px;
-  height: 200px;
-  max-width: 100%;
-}
-.item {
-  padding: 16px;
-  box-sizing: border-box;
+.item-title {
+  text-decoration: none;
+  a {
+    color: black;
+  }
 }
