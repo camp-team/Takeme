@@ -11,9 +11,12 @@
     </form>
   </div>
   <div class="login">
-    <button class="login-button" (click)="openLoginDialog()">
+    <button #loginArea class="login-button" (click)="login()">
       ログイン
     </button>
+    <div *ngIf="user$ | async as user; else loginArea">
+      <button (click)="logout()">ログアウト</button>
+    </div>
   </div>
 </header>
 <router-outlet></router-outlet>
