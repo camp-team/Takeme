@@ -13,9 +13,16 @@ import { AngularFireFunctionsModule, REGION } from '@angular/fire/functions';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { SharedModule } from './shared/shared.module';
+import { LoginDialogComponent } from './login-dialog/login-dialog.component';
+import { MatButtonModule } from '@angular/material/button';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LoginDialogComponent, NotFoundComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -28,8 +35,15 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     AngularFireAuthModule,
     MatIconModule,
     MatSnackBarModule,
+    SharedModule,
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatFormFieldModule,
   ],
   providers: [{ provide: REGION, useValue: 'asia^northeast1' }],
   bootstrap: [AppComponent],
+  entryComponents: [LoginDialogComponent],
 })
 export class AppModule {}

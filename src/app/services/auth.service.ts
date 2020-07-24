@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { auth, User } from 'firebase/app';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -11,20 +11,47 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   providedIn: 'root',
 })
 export class AuthService {
-  afUser$: Observable<User> = this.afAuth.user;
+  afUser$: Observable<User> = this.afAuth.authState.pipe(
+    switchMap((afUser) => {
+      if (afUser) {
+        return this.db.doc<User>(`users/${afUser.uid}`).valueChanges();
+      } else {
+        return of(null);
+      }
+    })
+  );
 
   constructor(
     private afAuth: AngularFireAuth,
     private router: Router,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private db: AngularFirestore
   ) {
     this.afUser$.subscribe((user) => console.log(user));
   }
 
-  login() {
+  facebooklogin() {
+    const provider = new auth.FacebookAuthProvider();
+    provider.setCustomParameters({ prompt: 'select_account' });
+    return this.afAuth.signInWithPopup(provider).then(() => {
+      this.snackBar.open('ようこそ', null, {
+        duration: 2000,
+      });
+    });
+  }
+  twitterlogin() {
+    const provider = new auth.TwitterAuthProvider();
+    provider.setCustomParameters({ prompt: 'select_account' });
+    return this.afAuth.signInWithPopup(provider).then(() => {
+      this.snackBar.open('ようこそ', null, {
+        duration: 2000,
+      });
+    });
+  }
+  googlelogin() {
     const provider = new auth.GoogleAuthProvider();
     provider.setCustomParameters({ prompt: 'select_account' });
-    this.afAuth.signInWithPopup(provider).then(() => {
+    return this.afAuth.signInWithPopup(provider).then(() => {
       this.snackBar.open('ようこそ', null, {
         duration: 2000,
       });
