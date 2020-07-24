@@ -11,14 +11,11 @@
     </form>
   </div>
   <div class="login">
-    <div class="login__items">
-      <button class="login-in" *ngIf="!(user$ | async)" (click)="login()">
-        ログイン
-      </button>
-
-      <button class="login-out" *ngIf="user$ | async" (click)="logout()">
-        ログアウト
-      </button>
+    <button #loginArea class="login-button" (click)="login()">
+      ログイン
+    </button>
+    <div *ngIf="user$ | async as user; else loginArea">
+      <button (click)="logout()">ログアウト</button>
     </div>
   </div>
 </header>
