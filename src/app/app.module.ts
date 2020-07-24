@@ -19,9 +19,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginDialogComponent],
+  declarations: [AppComponent, LoginDialogComponent, NotFoundComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
