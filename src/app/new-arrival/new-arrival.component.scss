@@ -1,9 +1,12 @@
 .heading {
-  margin-left: 80px;
-  margin-bottom: 16px;
+  margin-left: 56px;
+  margin-bottom: 8px;
+  position: relative;
   mat-icon {
     margin-right: 8px;
-    font-size: 24px;
+    font-size: 40px;
+    position: absolute;
+    left: -32px;
   }
 }
 .grid {
@@ -14,4 +17,7 @@
   a {
     color: black;
   }
+}
+.item-image {
+  padding: 16px;
 }
