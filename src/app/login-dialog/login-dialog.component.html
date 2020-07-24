@@ -2,61 +2,6 @@
   <h2>ログイン</h2>
   <div class="login">
     <div class="login__items">
-      <div *ngIf="user$ | async as user; else loginArea">
-        <p *ngIf="user.emailVerified">メールアドレス認証済み</p>
-        <p *ngIf="!user.emailVerified">メールアドレス未認証</p>
-        <button (click)="maillogout()">logout</button>
-      </div>
-
-      <ng-template #loginArea>
-        <form [formGroup]="form">
-          <div class="login-form">
-            <p>メールアドレス</p>
-            <input
-              type="email"
-              formControlName="email"
-              required
-              autocomplete="email"
-              class="email"
-            />
-            <p>パスワード</p>
-            <input
-              type="password"
-              formControlName="password"
-              required
-              autocomplete="current-password"
-              class="password"
-            />
-          </div>
-          <div class="reset">
-            <button
-              class="register"
-              type="button"
-              (click)="register()"
-              [disabled]="form.invalid"
-            >
-              会員登録する
-            </button>
-            <button
-              class="resetPassword"
-              type="button"
-              (click)="resetPassword()"
-              [disabled]="form.get('email').invalid"
-            >
-              パスワードを忘れた場合
-            </button>
-          </div>
-          <button
-            class="login-login"
-            type="button"
-            (click)="maillogin()"
-            [disabled]="form.invalid"
-          >
-            ログイン
-          </button>
-        </form>
-      </ng-template>
-      <hr width="100%" />
       <button class="login-facebook" (click)="facebookLogin()">
         <span class="fab fa-facebook"></span>
         Facebookで開始

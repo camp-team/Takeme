@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { MatDialogRef, MatDialog } from '@angular/material/dialog';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-login-dialog',
@@ -9,11 +9,6 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./login-dialog.component.scss'],
 })
 export class LoginDialogComponent implements OnInit {
-  form = this.fb.group({
-    email: ['', [Validators.email, Validators.required]],
-    password: ['', [Validators.required, Validators.minLength(6)]],
-  });
-
   user$ = this.authService.afUser$;
 
   constructor(
@@ -21,21 +16,6 @@ export class LoginDialogComponent implements OnInit {
     private dialog: MatDialogRef<LoginDialogComponent>,
     private fb: FormBuilder
   ) {}
-  register() {
-    this.authService.createUser(this.form.value);
-  }
-
-  maillogin() {
-    this.authService.login(this.form.value);
-  }
-
-  maillogout() {
-    this.authService.logout();
-  }
-
-  resetPassword() {
-    this.authService.resetPassword(this.form.value.email);
-  }
 
   facebookLogin() {
     this.authService.facebooklogin().then(() => {
