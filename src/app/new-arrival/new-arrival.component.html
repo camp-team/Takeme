@@ -1,29 +1,16 @@
 <div class="container">
-  <h2 class="heading"><mat-icon>new_releases</mat-icon>To-Beの新着</h2>
+  <h2 class="heading">Takemeの新着</h2>
 
-  <swiper [config]="config" [(index)]="selectedProjectId">
-    <div class="grid" *ngFor="let project of projects; index as i">
-      <div class="item-image">
-        <a href="#"
-          ><img
-            src="/assets/images/project-{{ i + 4 }}.jpeg"
-            alt="プロジェクト"
-            width="310px"
-            height="370px"
-          />
-        </a>
+  <div class="grid">
+    <swiper [config]="config" [(index)]="selectedResId">
+      <div class="item" *ngFor="let restaurant of restaurants; index as i">
+        <mat-card>
+          <img src="/assets/images/res-{{ i + 1 }}.jpeg" alt="レストラン" />
+          <h3>{{ restaurant.name }}</h3>
+          <p>{{ restaurant.place }}</p>
+          <p>{{ restaurant.price }}</p>
+        </mat-card>
       </div>
-      <div class="item-title">
-        <a href="http://"
-          ><h3>{{ project.title }}</h3></a
-        >
-        <a href="http://"
-          ><p>{{ project.explain }}</p></a
-        >
-        <a href="http://"
-          ><p>{{ project.people }}</p></a
-        >
-      </div>
-    </div>
-  </swiper>
+    </swiper>
+  </div>
 </div>

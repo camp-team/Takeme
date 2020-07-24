@@ -10,59 +10,25 @@ export class NewArrivalComponent implements OnInit {
   config: SwiperConfigInterface = {
     loop: true,
     navigation: true,
-    slidesPerView: 4,
+    slidesPerView: 3,
   };
-  selectedProjectId = 0;
-  projects = [
+  selectedResId = 0;
+
+  restaurants = [
     {
-      title: 'プロジェクト名',
-      explain: '詳細説明',
-      people: '募集人数',
+      name: 'item 1',
+      place: 'ffff',
+      price: '100',
     },
     {
-      title: 'プロジェクト名',
-      explain: '詳細説明',
-      people: '募集人数',
+      name: 'item 2',
+      place: 'gggg',
+      price: '200',
     },
     {
-      title: 'プロジェクト名',
-      explain: '詳細説明',
-      people: '募集人数',
-    },
-    {
-      title: 'プロジェクト名',
-      explain: '詳細説明',
-      people: '募集人数',
-    },
-    {
-      title: 'プロジェクト名',
-      explain: '詳細説明',
-      people: '募集人数',
-    },
-    {
-      title: 'プロジェクト名',
-      explain: '詳細説明',
-      people: '募集人数',
-    },
-    {
-      title: 'プロジェクト名',
-      explain: '詳細説明',
-      people: '募集人数',
-    },
-    {
-      title: 'プロジェクト名',
-      explain: '詳細説明',
-      people: '募集人数',
-    },
-    {
-      title: 'プロジェクト名',
-      explain: '詳細説明',
-      people: '募集人数',
-    },
-    {
-      title: 'プロジェクト名',
-      explain: '詳細説明',
-      people: '募集人数',
+      name: 'item 2',
+      place: 'dddd',
+      price: '300',
     },
   ];
 
