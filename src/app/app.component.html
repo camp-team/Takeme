@@ -11,11 +11,14 @@
     </form>
   </div>
   <div class="login">
-    <button #loginArea class="login-button" (click)="login()">
-      ログイン
-    </button>
-    <div *ngIf="user$ | async as user; else loginArea">
-      <button (click)="logout()">ログアウト</button>
+    <ng-template #loginArea>
+      <button (click)="openDialog()" class="login-button">
+        ログイン
+      </button>
+    </ng-template>
+    <div *ngIf="user$ | async as user; else loginArea" class="logout">
+      <p class="logInUser">{{ user.name }}でログイン中</p>
+      <button class="logout-button" (click)="logout()">ログアウト</button>
     </div>
   </div>
 </header>
