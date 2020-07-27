@@ -17,7 +17,7 @@
       </button>
     </ng-template>
     <div *ngIf="user$ | async as user; else loginArea" class="logout">
-      <p class="logInUser">{{ user.name }}でログイン中</p>
+      <p class="login-user">{{ user.name }}でログイン中</p>
       <button class="logout-button" (click)="logout()">ログアウト</button>
     </div>
   </div>
