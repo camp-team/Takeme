@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { auth, User } from 'firebase/app';
+import { auth } from 'firebase/app';
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { User } from '../interfaces/user';
 
 @Injectable({
   providedIn: 'root',
@@ -26,9 +27,7 @@ export class AuthService {
     private router: Router,
     private snackBar: MatSnackBar,
     private db: AngularFirestore
-  ) {
-    this.afUser$.subscribe((user) => console.log(user));
-  }
+  ) {}
 
   facebooklogin() {
     const provider = new auth.FacebookAuthProvider();
