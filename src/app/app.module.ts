@@ -20,6 +20,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [AppComponent, LoginDialogComponent, NotFoundComponent],
@@ -41,6 +43,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ReactiveFormsModule,
     MatInputModule,
     MatFormFieldModule,
+    MatSidenavModule,
+    MatListModule,
   ],
   providers: [{ provide: REGION, useValue: 'asia^northeast1' }],
   bootstrap: [AppComponent],
