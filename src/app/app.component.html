@@ -11,15 +11,37 @@
     </form>
   </div>
   <div class="login">
+    <ng-container *ngIf="user$ | async as user; else loginArea">
+      <button mat-icon-button class="notify">
+        <mat-icon>notifications</mat-icon>
+      </button>
+      <button
+        class="user-image"
+        mat-icon-button
+        [matMenuTriggerFor]="menu"
+        [style.background-image]="'url(' + user.avatarURL + ')'"
+      ></button>
+
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="logout()">
+          <mat-icon>login</mat-icon>
+          <span>ログアウト</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>account_box</mat-icon>
+          <span>マイページ</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>help</mat-icon>
+          <span>ヘルプ</span>
+        </button>
+      </mat-menu>
+    </ng-container>
     <ng-template #loginArea>
       <button (click)="openDialog()" class="login-button">
         ログイン
       </button>
     </ng-template>
-    <div *ngIf="user$ | async as user; else loginArea" class="logout">
-      <p class="login-user">{{ user.name }}でログイン中</p>
-      <button class="logout-button" (click)="logout()">ログアウト</button>
-    </div>
   </div>
 </header>
 <router-outlet></router-outlet>
