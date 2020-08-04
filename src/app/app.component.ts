@@ -12,10 +12,6 @@ import { User } from './interfaces/user';
 })
 export class AppComponent {
   user$ = this.authService.afUser$;
-  @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
-  someMethod() {
-    this.trigger.openMenu();
-  }
 
   constructor(
     private authService: AuthService,
