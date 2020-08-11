@@ -3,4 +3,8 @@ export interface User {
   avatarURL: string;
   email: string;
   createdAt: Date;
+  points: number;
+  coupon: number;
+  likes: number;
+  projects: number;
 }
