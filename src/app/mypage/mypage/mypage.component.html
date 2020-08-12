@@ -1,1 +1,48 @@
-<p>mypage works!</p>
+<div class="container">
+  <div class="mypage">
+    <mat-card class="mypage-card">
+      <mat-card-header>
+        <div mat-card-avatar class="user-items">
+          <ng-container *ngIf="user$ | async as user">
+            <button
+              class="user-image"
+              mat-icon-button
+              [style.background-image]="'url(' + user.avatarURL + ')'"
+            ></button>
+          </ng-container>
+          <ng-container *ngIf="user$ | async as user">
+            <p class="user-name">{{ user.name }}</p>
+          </ng-container>
+          <ng-container *ngIf="user$ | async as user">
+            <p class="user-email">{{ user.email }}</p>
+          </ng-container>
+          <ng-container *ngIf="user$ | async as user">
+            <div class="user-points">
+              {{ user.points }}<span class="fab fa-product-hunt"></span>
+            </div>
+          </ng-container>
+          <div class="contents-images">
+            <ng-container *ngIf="user$ | async as user">
+              <div class="user-coupon">
+                <span class="fas fa-ticket-alt"></span>
+                <p>0{{ user.coupon }}</p>
+              </div>
+
+              <div class="user-coupon">
+                <span class="far fa-heart"></span>
+                <p>0{{ user.likes }}</p>
+              </div>
+
+              <div class="user-coupon">
+                <span class="fab fa-bitbucket"></span>
+                <p>0{{ user.projects }}</p>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </mat-card-header>
+    </mat-card>
+
+    <h2 class="title">←　マイページ</h2>
+  </div>
+</div>
