@@ -2,38 +2,34 @@
   <div class="mypage">
     <mat-card class="mypage-card">
       <mat-card-header>
-        <div mat-card-avatar class="user-items">
-          <ng-container *ngIf="user$ | async as user">
-            <button
-              class="user-image"
-              mat-icon-button
-              [style.background-image]="'url(' + user.avatarURL + ')'"
-            ></button>
-          </ng-container>
-          <ng-container *ngIf="user$ | async as user">
-            <p class="user-name">{{ user.name }}</p>
-          </ng-container>
-          <ng-container *ngIf="user$ | async as user">
-            <p class="user-email">{{ user.email }}</p>
-          </ng-container>
-          <ng-container *ngIf="user$ | async as user">
-            <div class="user-points">
-              {{ user.points }}<span class="fab fa-product-hunt"></span>
-            </div>
-          </ng-container>
-          <div class="contents-images">
+        <div mat-card-avatar class="user">
+          <div class="user__info">
+            <ng-container *ngIf="user$ | async as user">
+              <button
+                class="user-image"
+                mat-icon-button
+                [style.background-image]="'url(' + user.avatarURL + ')'"
+              ></button>
+              <div class="user-name">{{ user.name }}</div>
+              <div class="user-email">{{ user.email }}</div>
+              <div class="user-points">
+                {{ user.points }}<span class="fab fa-product-hunt"></span>
+              </div>
+            </ng-container>
+          </div>
+          <div class="user__contents">
             <ng-container *ngIf="user$ | async as user">
               <div class="user-coupon">
                 <span class="fas fa-ticket-alt"></span>
                 <p>0{{ user.coupon }}</p>
               </div>
 
-              <div class="user-coupon">
+              <div class="user-likes">
                 <span class="far fa-heart"></span>
                 <p>0{{ user.likes }}</p>
               </div>
 
-              <div class="user-coupon">
+              <div class="user-bitbucket">
                 <span class="fab fa-bitbucket"></span>
                 <p>0{{ user.projects }}</p>
               </div>
