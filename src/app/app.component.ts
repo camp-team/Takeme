@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { LoginDialogComponent } from './login-dialog/login-dialog.component';
 import { MatMenuModule, MatMenuTrigger } from '@angular/material/menu';
 import { User } from './interfaces/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,8 @@ export class AppComponent {
   constructor(
     private authService: AuthService,
     private dialog: MatDialog,
-    private matMenu: MatMenuModule
+    private matMenu: MatMenuModule,
+    private router: Router
   ) {}
 
   openDialog() {
@@ -25,5 +27,8 @@ export class AppComponent {
 
   logout() {
     this.authService.logout();
+  }
+  myPage() {
+    this.router.navigateByUrl('mypage');
   }
 }
