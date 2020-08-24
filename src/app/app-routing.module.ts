@@ -17,6 +17,12 @@ const routes: Routes = [
       import('./mypage/mypage.module').then((m) => m.MypageModule),
   },
   {
+    path: 'details/:id',
+    loadChildren: () =>
+      import('./detail/detail.module').then((m) => m.DetailModule),
+  },
+
+  {
     path: '**',
     component: NotFoundComponent,
   },
