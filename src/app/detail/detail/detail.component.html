@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="details">
+    <div class="details__left">
+      <div class="details--images">
+        <img src="/assets/images/project-4.jpeg" width="420px" />
+      </div>
+    </div>
+    <div class="details__right">
+      <div class="details--contents">
+        <p>プロジェクト名：{{ article.title }}</p>
+        <p>期間：{{ article.length }}</p>
+        <p>獲得ポイント：{{ article.points }}<span>P</span></p>
+        <ng-container *ngIf="user$ | async as user; else loginArea">
+          <button (click)="joinButton()" class="button" routerLink="/mypage">
+            参加する
+          </button>
+        </ng-container>
+        <ng-template #loginArea>
+          <button (click)="openDialog()" class="button">
+            ログイン
+          </button>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>
