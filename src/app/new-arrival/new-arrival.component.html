@@ -14,15 +14,9 @@
         </a>
       </div>
       <div class="item-title">
-        <a href="http://"
-          ><h3>{{ project.title }}</h3></a
-        >
-        <a href="http://"
-          ><p>{{ project.explain }}</p></a
-        >
-        <a href="http://"
-          ><p>{{ project.people }}</p></a
-        >
+        <h3>{{ project.title }}</h3>
+
+        <button [routerLink]="['/details', project.id]">詳細画面</button>
       </div>
     </div>
   </swiper>
