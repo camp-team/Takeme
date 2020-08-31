@@ -8,21 +8,21 @@
   height: 320px;
   text-align: center;
   padding-top: 64px;
-}
-.card__image {
-  padding: 24px;
-  border-radius: 50%;
-}
-.card__name {
-  margin: 24px 0;
-}
-.card__points {
-  background: #fff9f2;
-  display: inline-block;
-  padding: 6px 32px;
-  color: #ffdc6d;
-  border-radius: 6px;
-  font-size: 24px;
+  &__image {
+    padding: 24px;
+    border-radius: 50%;
+  }
+  &__name {
+    margin: 24px 0;
+  }
+  &__points {
+    background: #fff9f2;
+    display: inline-block;
+    padding: 6px 32px;
+    color: #ffdc6d;
+    border-radius: 6px;
+    font-size: 24px;
+  }
 }
 
 .data {
@@ -31,14 +31,14 @@
   margin-top: 48px;
   font-size: 16px;
   margin-left: 16px;
-}
-.data__likes {
-  margin-left: 16px;
+  &__likes {
+    margin-left: 20px;
+  }
 }
 .coupon,
 .likes,
 .bitbucket {
-  font-size: 2px;
+  font-size: 12px;
 }
 .title {
   margin-left: 24px;
