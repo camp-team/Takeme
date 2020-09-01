@@ -1,0 +1,31 @@
+<div class="container">
+  <mat-card class="card">
+    <ng-container *ngIf="user$ | async as user">
+      <button
+        class="card__image"
+        mat-icon-button
+        [style.background-image]="'url(' + user.avatarURL + ')'"
+      ></button>
+      <p class="card__name">{{ user.name }}</p>
+      <p class="card__email">{{ user.email }}</p>
+      <div class="card__points">
+        {{ user.points }}<span class="fab fa-product-hunt"></span>
+      </div>
+      <div class="data">
+        <div class="data__coupon">
+          <span class="fas fa-ticket-alt"></span>
+          <p class="coupon">クーポン{{ user.coupon }}</p>
+        </div>
+        <div class="data__likes">
+          <span class="far fa-heart"></span>
+          <p class="likes">お気に入り{{ user.likes }}</p>
+        </div>
+        <div class="data__bitbucket">
+          <span class="fab fa-bitbucket"></span>
+          <p class="bitbucket">プロジェクト内容{{ user.projects }}</p>
+        </div>
+      </div>
+    </ng-container>
+  </mat-card>
+  <h2 class="title">←　マイページ</h2>
+</div>
