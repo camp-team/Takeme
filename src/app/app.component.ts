@@ -28,7 +28,7 @@ export class AppComponent {
   logout() {
     this.authService.logout();
   }
-  myPage() {
+  linkProfile() {
     this.router.navigateByUrl('mypage');
   }
 }
