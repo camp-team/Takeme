@@ -1,54 +1,26 @@
-.details {
+.container {
+  font-family: -apple-system, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: bold;
+  background: #f7f7f7;
+}
+
+.contents {
   display: flex;
-  justify-content: space-evenly;
   &__left {
     margin-left: 48px;
   }
-
-  &__right {
-    padding: 40px 80px 0 0;
-  }
-  &--contents {
+  &__info {
     text-align: center;
-    letter-spacing: 4px;
-    margin-top: 24px;
+    font-size: large;
+    margin: 16px 0;
+    border: 1px solid #fefefe;
   }
-  &--contents p {
-    font-size: 20px;
-  }
-  &--contents span {
-    color: white;
-    background: #fdc453;
-    padding: 4px 8px;
-    border-radius: 50%;
-    margin-left: 6px;
+  &__share {
+    text-align: center;
   }
 }
-.details--contents {
-  margin: 2em 0;
-  position: relative;
-  padding: 0.5em 1.5em;
-  border-top: solid 2px orange;
-  border-bottom: solid 2px orange;
-}
-.details--contents:before,
-.details--contents:after {
-  content: '';
-  position: absolute;
-  top: -10px;
-  width: 2px;
-  height: -webkit-calc(100% + 20px);
-  height: calc(100% + 20px);
-  background-color: orange;
-}
-.details--contents:before {
-  left: 10px;
-}
-.details--contents:after {
-  right: 10px;
-}
-
-.button {
+.login {
   font-family: 'Yu Gothic', YuGothic, Verdana, 'Hiragino Kaku Gothic ProN',
     'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo,
     sans-serif;
@@ -64,8 +36,40 @@
   border: none;
   transition: 0.5s;
   background-size: 200%;
-  margin-top: 20px;
 }
-.button:hover {
+.login:hover {
   background-position: right center;
+}
+.twitter {
+  background: #1da1f2;
+  color: white;
+  border: #1da1f2;
+  padding: 12px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 24px;
+}
+
+.project {
+  text-align: center;
+  margin: 0 auto;
+  &__header h1 {
+    font-size: 32px;
+  }
+  &__detail h2 {
+    color: white;
+    font-style: 6px;
+    background-color: rgb(236, 188, 67);
+    display: inline;
+    font-weight: normal;
+    padding: 8px;
+    border-radius: 4px;
+    margin: 0 24px;
+  }
+  .length {
+    background-color: rgb(221, 68, 68);
+  }
+  &__share {
+    margin: 32px 0 0 0;
+  }
 }

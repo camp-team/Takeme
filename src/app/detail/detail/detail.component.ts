@@ -22,7 +22,7 @@ export class DetailComponent implements OnInit {
     private snackBar: MatSnackBar
   ) {}
 
-  joinButton() {
+  shareTwitter() {
     this.snackBar.open('プロジェクトに参加しました', null, {
       duration: 4000,
     });
