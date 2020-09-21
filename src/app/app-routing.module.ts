@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TopModule } from './top/top.module';
 import { AuthGuard } from './guards/auth.guard';
+
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
@@ -15,6 +16,11 @@ const routes: Routes = [
     pathMatch: 'full',
     loadChildren: () =>
       import('./mypage/mypage.module').then((m) => m.MypageModule),
+  },
+  {
+    path: 'policy',
+    loadChildren: () =>
+      import('./policy/policy.module').then((m) => m.PolicyModule),
   },
   {
     path: 'details/:id',
