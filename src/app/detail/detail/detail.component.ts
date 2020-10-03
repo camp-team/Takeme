@@ -5,6 +5,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { MatDialog } from '@angular/material/dialog';
 import { LoginDialogComponent } from 'src/app/login-dialog/login-dialog.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { AngularFireFunctions } from '@angular/fire/functions';
 
 @Component({
   selector: 'app-detail',
@@ -19,7 +20,8 @@ export class DetailComponent implements OnInit {
     private articleService: ArticleService,
     private authService: AuthService,
     private dialog: MatDialog,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private fns: AngularFireFunctions
   ) {}
 
   shareTwitter() {
@@ -29,6 +31,12 @@ export class DetailComponent implements OnInit {
   }
   openDialog() {
     this.dialog.open(LoginDialogComponent);
+  }
+  tweet() {
+    const callable = this.fns.httpsCallable('tweet');
+    callable({
+      body: 'ツイート内容',
+    });
   }
   ngOnInit(): void {
     this.route.paramMap.subscribe((map) => {
