@@ -8,7 +8,7 @@ import { ArticleService } from '../services/article.service';
   styleUrls: ['./new-arrival.component.scss'],
 })
 export class NewArrivalComponent implements OnInit {
-  projects = this.articleService.projects;
+  projects = this.articleService.arrivalList;
 
   config: SwiperConfigInterface = {
     loop: true,

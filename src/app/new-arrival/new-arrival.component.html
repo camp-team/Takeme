@@ -2,11 +2,11 @@
   <h2 class="heading"><mat-icon>fiber_new</mat-icon>To-Beの新着</h2>
 
   <swiper [config]="config" [(index)]="selectedProjectId">
-    <div class="grid" *ngFor="let project of projects; index as i">
+    <div class="grid" *ngFor="let project of projects">
       <div class="item-image">
         <a href="#"
           ><img
-            src="/assets/images/project-{{ i + 4 }}.jpeg"
+            src="/assets/images/project-{{ project.id }}.jpeg"
             alt="プロジェクト"
             width="310px"
             height="370px"
@@ -16,7 +16,9 @@
       <div class="item-title">
         <h3>{{ project.title }}</h3>
 
-        <button [routerLink]="['/details', project.id]">詳細画面</button>
+        <button class="button-detail" [routerLink]="['/details', project.id]">
+          詳細画面
+        </button>
       </div>
     </div>
   </swiper>
