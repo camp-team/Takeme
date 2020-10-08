@@ -12,14 +12,15 @@ const routes: Routes = [
     loadChildren: () => import('./top/top.module').then((m) => m.TopModule),
   },
   {
-
-    loadChildren: () =>
-      import('./policy/policy.module').then((m) => m.PolicyModule),
-
     path: 'mypage',
+    pathMatch: 'full',
     loadChildren: () =>
       import('./mypage/mypage.module').then((m) => m.MypageModule),
-
+  },
+  {
+    path: 'policy',
+    loadChildren: () =>
+      import('./policy/policy.module').then((m) => m.PolicyModule),
   },
   {
     path: 'details/:id',
