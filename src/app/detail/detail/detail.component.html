@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="contents">
+    <div class="project">
+      <div class="project__images">
+        <img
+          src="{{ article.src }}"
+          width="740px"
+          height="440px"
+          alt="プロジェクト"
+        />
+      </div>
+      <div class="project__header">
+        <h1 class="title">{{ article.title }}</h1>
+      </div>
+      <div class="project__detail">
+        <h2 class="point">獲得ポイント:{{ article.point }}P</h2>
+        <h2 class="length">チャレンジ期間：{{ article.length }}</h2>
+      </div>
+
+      <div class="project__share">
+        <ng-container *ngIf="user$ | async as user; else loginArea">
+          <a
+            href="https://twitter.com/share?text=私は今日から{{
+              article.title
+            }}に{{
+              article.length
+            }}チャレンジします。%0a🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥&url=https://To-Be-77479.web.app/%0a&hashtags=ToBe,challenge,projects,goals,dreams,毎日投稿,夢,チャレンジ"
+            onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;"
+            rel="nofollow"
+            class="twitter"
+            ><span class="fab fa-twitter"></span>
+            このチャレンジに挑戦する
+          </a>
+        </ng-container>
+        <ng-template #loginArea>
+          <button (click)="openDialog()" class="login">
+            ログイン
+          </button>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

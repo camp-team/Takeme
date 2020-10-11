@@ -23,6 +23,12 @@ const routes: Routes = [
 
   },
   {
+    path: 'details/:id',
+    loadChildren: () =>
+      import('./detail/detail.module').then((m) => m.DetailModule),
+  },
+
+  {
     path: '**',
     component: NotFoundComponent,
   },

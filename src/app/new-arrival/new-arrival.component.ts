@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { ArticleService } from '../services/article.service';
 
 @Component({
   selector: 'app-new-arrival',
@@ -7,66 +8,16 @@ import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
   styleUrls: ['./new-arrival.component.scss'],
 })
 export class NewArrivalComponent implements OnInit {
+  projects = this.articleService.projects;
+
   config: SwiperConfigInterface = {
     loop: true,
     navigation: true,
     slidesPerView: 4,
   };
   selectedProjectId = 0;
-  projects = [
-    {
-      title: 'プロジェクト名',
-      explain: '詳細説明',
-      people: '募集人数',
-    },
-    {
-      title: 'プロジェクト名',
-      explain: '詳細説明',
-      people: '募集人数',
-    },
-    {
-      title: 'プロジェクト名',
-      explain: '詳細説明',
-      people: '募集人数',
-    },
-    {
-      title: 'プロジェクト名',
-      explain: '詳細説明',
-      people: '募集人数',
-    },
-    {
-      title: 'プロジェクト名',
-      explain: '詳細説明',
-      people: '募集人数',
-    },
-    {
-      title: 'プロジェクト名',
-      explain: '詳細説明',
-      people: '募集人数',
-    },
-    {
-      title: 'プロジェクト名',
-      explain: '詳細説明',
-      people: '募集人数',
-    },
-    {
-      title: 'プロジェクト名',
-      explain: '詳細説明',
-      people: '募集人数',
-    },
-    {
-      title: 'プロジェクト名',
-      explain: '詳細説明',
-      people: '募集人数',
-    },
-    {
-      title: 'プロジェクト名',
-      explain: '詳細説明',
-      people: '募集人数',
-    },
-  ];
 
-  constructor() {}
+  constructor(private articleService: ArticleService) {}
 
   ngOnInit(): void {}
 }
