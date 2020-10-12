@@ -3,7 +3,6 @@ import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 
 const db = admin.firestore();
-// const config = require('./config');
 
 export const tweet = functions
   .region('asia-northeast1')
@@ -20,9 +19,7 @@ export const tweet = functions
     });
 
     if (twitterData) {
-      await twitterClient.post('statuses/update', {
-        //  status: data.body + config.tweetTemplate,
-      });
+      await twitterClient.post('statuses/update', {});
 
       const twitterProfile = await twitterClient.get('users/show', {
         user_id: '@asung_kim',

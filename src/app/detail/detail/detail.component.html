@@ -19,7 +19,6 @@
 
       <div class="project__share">
         <ng-container *ngIf="user$ | async as user; else loginArea">
-          <button (click)="tweet()" class="tweet"></button>
         </ng-container>
         <ng-template #loginArea>
           <button (click)="openDialog()" class="login">
