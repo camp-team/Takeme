@@ -12,7 +12,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./detail.component.scss'],
 })
 export class DetailComponent implements OnInit {
-  article;
+  article: string;
   user$ = this.authService.afUser$;
   constructor(
     private route: ActivatedRoute,
