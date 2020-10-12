@@ -7,6 +7,7 @@ import { switchMap } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { User } from '../interfaces/user';
+import { AngularFireFunctions } from '@angular/fire/functions';
 
 @Injectable({
   providedIn: 'root',
@@ -26,9 +27,24 @@ export class AuthService {
     private afAuth: AngularFireAuth,
     private router: Router,
     private snackBar: MatSnackBar,
-    private db: AngularFirestore
+    private db: AngularFirestore,
+    private fns: AngularFireFunctions
   ) {}
+  async createUser(): Promise<any> {
+    if (this.afUser$) {
+      await this.afAuth.signOut();
+    }
+    const authProvider = new auth.TwitterAuthProvider();
 
+    const result = await this.afAuth.signInWithPopup(authProvider);
+
+    const { accessToken, secret } = result.credential as any;
+
+    this.db.doc(`users/${result.user.uid}/private/twitter`).set({
+      accessToken,
+      secret,
+    });
+  }
   facebooklogin() {
     const provider = new auth.FacebookAuthProvider();
     provider.setCustomParameters({ prompt: 'select_account' });
@@ -64,5 +80,12 @@ export class AuthService {
       });
     });
     this.router.navigateByUrl('/');
+  }
+
+  tweet() {
+    const callable = this.fns.httpsCallable('tweet');
+    callable({
+      body: 'ツイート内容',
+    });
   }
 }

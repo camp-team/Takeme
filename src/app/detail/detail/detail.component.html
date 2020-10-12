@@ -19,18 +19,6 @@
 
       <div class="project__share">
         <ng-container *ngIf="user$ | async as user; else loginArea">
-          <a
-            href="https://twitter.com/share?text=私は今日から{{
-              article.title
-            }}に{{
-              article.length
-            }}チャレンジします。%0a🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥&url=https://To-Be-77479.web.app/%0a&hashtags=ToBe,challenge,projects,goals,dreams,毎日投稿,夢,チャレンジ"
-            onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;"
-            rel="nofollow"
-            class="twitter"
-            ><span class="fab fa-twitter"></span>
-            このチャレンジに挑戦する
-          </a>
         </ng-container>
         <ng-template #loginArea>
           <button (click)="openDialog()" class="login">

@@ -48,7 +48,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MatListModule,
     MatMenuModule,
   ],
-  providers: [{ provide: REGION, useValue: 'asia^northeast1' }],
+  providers: [{ provide: REGION, useValue: 'asia-northeast1' }],
   bootstrap: [AppComponent],
   entryComponents: [LoginDialogComponent],
 })
