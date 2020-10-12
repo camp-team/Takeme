@@ -18,7 +18,6 @@ const routes: Routes = [
     path: 'mypage',
     loadChildren: () =>
       import('./mypage/mypage.module').then((m) => m.MypageModule),
-
   },
   {
     path: 'details/:id',
