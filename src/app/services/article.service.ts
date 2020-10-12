@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ArticleService {
-  allArticles = [
+  private readonly allArticles = [
     {
       title: '「体の奥からデトックス！プチ断食1日」',
       length: '1日',
