@@ -12,9 +12,11 @@ const routes: Routes = [
     loadChildren: () => import('./top/top.module').then((m) => m.TopModule),
   },
   {
+    path: 'policy',
     loadChildren: () =>
       import('./policy/policy.module').then((m) => m.PolicyModule),
-
+  },
+  {
     path: 'mypage',
     loadChildren: () =>
       import('./mypage/mypage.module').then((m) => m.MypageModule),
@@ -24,7 +26,6 @@ const routes: Routes = [
     loadChildren: () =>
       import('./detail/detail.module').then((m) => m.DetailModule),
   },
-
   {
     path: '**',
     component: NotFoundComponent,

@@ -19,6 +19,7 @@ export class DetailComponent implements OnInit {
     private articleService: ArticleService,
     private authService: AuthService,
     private dialog: MatDialog,
+    private snackBar: MatSnackBar
   ) {}
 
   shareTwitter() {
