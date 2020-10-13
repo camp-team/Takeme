@@ -4,7 +4,7 @@ import { PolicyComponent } from './policy.component';
 
 const routes: Routes = [
   {
-    path: 'policy',
+    path: '',
     component: PolicyComponent,
   },
 ];

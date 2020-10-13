@@ -28,6 +28,7 @@ export class AppComponent {
   logout() {
     this.authService.logout();
   }
+  linkToMypage() {
     this.router.navigateByUrl('mypage');
   }
 }
