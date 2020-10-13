@@ -4,10 +4,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ArticleService {
-  projects = [
+  private readonly allArticles = [
     {
-      title: '「わがままボディーとはおさらば！炭水化物抜きダイエット」',
-      length: '1ヶ月間',
+      title: '「体の奥からデトックス！プチ断食1日」',
+      length: '1日',
       point: '100',
       id: '1',
       src: '/assets/images/diet.jpeg',
@@ -75,14 +75,29 @@ export class ArticleService {
       id: '10',
       src: '/assets/images/diet.jpeg',
     },
+    {
+      title: '「プロジェクト名」',
+      length: '1ヶ月間',
+      point: '100',
+      id: '10',
+      src: '/assets/images/diet.jpeg',
+    },
   ];
+  arrivalList = this.idToItem([4, 2, 6, 7, 10, 9]);
+  projects = this.idToItem([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
   constructor() {}
+
+  private idToItem(ids: number[]): any[] {
+    return ids.map((id) =>
+      this.allArticles.find((item) => item.id === id.toString())
+    );
+  }
 
   createArticle() {}
   deleteArticle() {}
   getArticle(id: string) {
-    return this.projects.find((item) => item.id === id);
+    return this.allArticles.find((item) => item.id === id);
   }
   updateArticle() {}
 }

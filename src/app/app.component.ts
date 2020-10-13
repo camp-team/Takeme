@@ -28,6 +28,4 @@ export class AppComponent {
   logout() {
     this.authService.logout();
   }
-    this.router.navigateByUrl('mypage');
-  }
 }

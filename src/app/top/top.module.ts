@@ -8,9 +8,10 @@ import { NewArrivalComponent } from '../new-arrival/new-arrival.component';
 import { MatCardModule } from '@angular/material/card';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { MatIconModule } from '@angular/material/icon';
+import { RecommendComponent } from '../recommend/recommend.component';
 
 @NgModule({
-  declarations: [TopComponent, MainVisualComponent, NewArrivalComponent],
+  declarations: [TopComponent, MainVisualComponent, NewArrivalComponent, RecommendComponent],
   imports: [
     CommonModule,
     TopRoutingModule,

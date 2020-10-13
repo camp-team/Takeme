@@ -12,13 +12,14 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./detail.component.scss'],
 })
 export class DetailComponent implements OnInit {
-  article;
+  article: {};
   user$ = this.authService.afUser$;
   constructor(
     private route: ActivatedRoute,
     private articleService: ArticleService,
     private authService: AuthService,
     private dialog: MatDialog,
+    private snackBar: MatSnackBar
   ) {}
 
   shareTwitter() {
